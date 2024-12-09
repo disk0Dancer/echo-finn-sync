@@ -127,6 +127,7 @@ celerybeat.pid
 # Environments
 .env
 # Virtual environments
+# Local environments
 .venv
 env/
 venv/
@@ -165,3 +166,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 .idea
+
+# 
+*.log

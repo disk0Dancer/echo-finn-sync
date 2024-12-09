@@ -1,10 +1,6 @@
-from venv import logger
-
 import pika
 import json
 import logging
-
-from pika_client import *
 
 logging.basicConfig(
     level=logging.ERROR,
@@ -20,7 +16,11 @@ def log(message):
     logger.info(message)
 
 def create_channel(queue_name):
-    connection = pika.BlockingConnection(pika.ConnectionParameters(host="localhost"))
+    params = pika.ConnectionParameters(
+        host='localhost', 
+        port=5672,
+    )
+    connection = pika.BlockingConnection(params)
     channel = connection.channel()
     channel.queue_declare(queue=queue_name)
     return connection, channel

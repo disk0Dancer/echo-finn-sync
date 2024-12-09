@@ -1,4 +1,5 @@
 # Byte-compiled / optimized / DLL files
+# Python-generated files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -8,6 +9,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+*.py[oc]
 build/
 develop-eggs/
 dist/
@@ -77,6 +79,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*.egg-info
 
 # IPython
 profile_default/
@@ -123,6 +126,7 @@ celerybeat.pid
 
 # Environments
 .env
+# Virtual environments
 .venv
 env/
 venv/
@@ -160,3 +164,4 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+.idea
